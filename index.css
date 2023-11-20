@@ -1,0 +1,285 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: white;
+    height: 100vh;
+    background: #121212;  
+    font-family: 'Inter', sans-serif;  
+}
+
+header {
+    background-image: url('images/title-img.png');
+    background-size: cover;
+    background-color: black;
+    padding: 5rem 3rem 0;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+}
+
+header a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600
+}
+
+form {
+    display: flex;
+    margin: 0 auto;
+    min-width: 260px;
+    max-width: 1200px;
+}
+
+input:focus {
+    outline: none;
+}
+
+input[type=text] {
+    width: 70%;
+    border-radius: 6px 0 0 6px;
+    background-color: #2E2E2F;
+    color: #A5A5A5;
+    background-image: url('images/Icon.png');
+    background-position: 20px 15px;
+    background-repeat: no-repeat;
+    padding-left: 3rem;
+}
+
+input[type=submit] {
+    width: 30%;
+    border-radius: 0 6px 6px 0;
+    background-color: #4B4B4B;
+    color: white;
+    letter-spacing: .5px;
+}
+
+input[type=submit]:active {
+    box-shadow: inset 0px 2px 4px 0px #353535;
+    position: relative;
+    transform: scale(.98, .97);
+    top: .5px;
+    right: 1.5px;
+}
+
+input {
+    padding: .8rem;
+    border: none;
+    margin-bottom: -1.3rem;
+    margin-top: 3rem;
+}
+
+#main-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+    min-height: 60vh;
+    padding: 3rem 3rem 1rem;
+    box-sizing: content-box;
+    
+}
+
+.main-text {
+    color: #2E2E2F;
+    font-size: 1.5rem;
+    font-weight: 600
+}
+
+
+/* Movie Data */
+
+button {
+    cursor: pointer;
+}
+.movie-container,
+.first-line-movie-data,
+.second-line-movie-data {
+    display: flex;
+    align-items: center;
+}
+
+.movie-container {
+    gap: 1.5rem;   
+    margin: 1.2rem auto 1.2rem 0;
+    max-width: 1200px;
+    
+}
+
+.movie-container h3,
+.first-line-movie-data p,
+.second-line-movie-data p {
+    margin: 0 0 1rem;
+}
+
+.first-line-movie-data,
+.add-to-watchlist {
+    gap: .5rem;
+}
+
+.movie-review-container {
+    display: flex;
+    align-items: baseline;
+    gap: .5rem;
+}
+
+.add-to-watchlist {
+    display: flex;
+    align-items: flex-start;
+    background: none;
+    color: white;
+    border: none;
+    margin: 0;
+    padding: 0;
+    
+}
+
+.plus-icon {
+    margin-top: 2px;
+}
+
+.second-line-movie-data {
+    gap: 1.5rem;
+}
+
+.movie-plot {
+    color: #A5A5A5;
+    margin: 0;
+}
+
+.movie-poster {
+    max-width: 120px;
+
+}
+
+hr {
+    height: 1px;
+    background-color: #2C2C2C;
+    border: none;
+    width: 100%;
+}
+
+.search-error {
+    color: #787878;
+    font-size: 1.2rem;
+    text-align: center;
+    max-width: 50vw;
+    min-width: 250px;
+    font-weight: 600;
+    
+}
+
+button:disabled {
+    transform: none;
+}
+
+/* Watchlist Page */
+
+.watchlist-header {
+    padding-bottom: 4.5rem;
+}
+
+#watchlist-main-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 40vh;
+    padding: 0rem 3rem 1rem;
+    
+}
+
+.watchlist-main-text {
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+section a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600
+}
+
+.link-to-main-page {
+    display: flex;    
+    align-items: center;
+}
+
+.plus-button-link {
+    margin: 0rem .5rem 0 0;
+    cursor: pointer;
+}
+
+.watchlist-movie-container {
+    margin-top: 3rem;
+}
+
+.add-margin-top {
+    margin-top: 2rem;
+}
+
+
+/* media queries */
+
+@media (max-width: 495px){
+    header {
+        padding: 5rem 1rem 0;
+    }
+    
+    .header {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        min-width: 269px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    #main-section {
+        padding: 2rem 1rem 1rem;
+        min-height: 0px;
+    }
+    
+    .main-icon {
+        margin-top: 3rem;
+    }
+    
+    .movie-poster {
+        display: none;
+    }
+    
+    .add-margin-top {
+        margin-top: 0;
+    }
+    
+    #watchlist-main-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 0px;
+        padding: 1rem 1rem 1rem;
+        
+    }
+    
+    .watchlist-main-text {
+        margin: 2rem auto .5rem;
+        text-align: center;
+    }
+}
